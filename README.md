@@ -1,3 +1,5 @@
+# 基于vue-element-admin的敏捷食堂后台管理平台
+
 # 克隆项目
 git clone https://github.com/PanJiaChen/vue-element-admin.git
 
