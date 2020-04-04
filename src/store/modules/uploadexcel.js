@@ -40,7 +40,7 @@ const actions = {
             data:in_data.data,
             flag:in_data.flag,
             key:in_data.key,
-            token:token,
+            token:in_data.token,
         }).then(response => {
         const { message } = response
         console.log('store upload_canteen_list_charge --------------------', message)
@@ -54,19 +54,16 @@ const actions = {
   },
 
   upload_canteen_list_add_member({ commit }, in_data) {
-    let token = state.token
     return new Promise((resolve, reject) => {
         upload_canteen_list({ 
             data:in_data.data,
             flag:in_data.flag,
             key:in_data.key,
-            token:token,
+            token:in_data.token,
         }).then(response => {
         const { message } = response
         console.log('store upload_canteen_list_charge --------------------', message)
         commit('SET_MESSAGE', message)
-        // commit('SET_TOKEN', data.token)
-        // setToken(data.token)
         resolve()
       }).catch(error => {
         reject(error)
@@ -75,20 +72,16 @@ const actions = {
   },
 
   query_res({ commit }, in_data) {
-    let token = state.token
     return new Promise((resolve, reject) => {
         upload_canteen_list({ 
             data:in_data.data,
             flag:in_data.flag,
             key:in_data.key,
-            token:token,
+            token:in_data.token,
         }).then(response => {
         const { message } = response
         console.log('store query_res --------------------', message)
         commit('SET_MESSAGE', message)
-        
-        // commit('SET_TOKEN', data.token)
-        // setToken(data.token)
         resolve()
       }).catch(error => {
         reject(error)

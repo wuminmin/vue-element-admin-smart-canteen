@@ -290,10 +290,22 @@ export const asyncRoutes = [
       //   meta: { title: 'Export Excel' }
       // },
       {
-        path: 'export-selected-excel',
-        component: () => import('@/views/excel/select-excel'),
-        name: 'SelectExcel',
+        path: 'export_selected_excel_charge',
+        component: () => import('@/views/excel/select_excel_charge'),
+        name: 'SelectExcel_charge',
+        meta: { title: '导出充值清单' }
+      },
+      {
+        path: 'export_selected_excel_consume',
+        component: () => import('@/views/excel/select_excel_consume'),
+        name: 'SelectExcel_consume',
         meta: { title: '导出消费清单' }
+      },
+      {
+        path: 'export_selected_excel_staff',
+        component: () => import('@/views/excel/select_excel_staff'),
+        name: 'SelectExcel_staff',
+        meta: { title: '导出员工清单' }
       },
       // {
       //   path: 'export-merge-header',
@@ -302,11 +314,17 @@ export const asyncRoutes = [
       //   meta: { title: 'Merge Header' }
       // },
       {
-        path: 'upload-excel',
-        component: () => import('@/views/excel/upload-excel'),
-        name: 'UploadExcel',
-        meta: { title: '上传数据' }
-      }
+        path: 'UploadExcel_charge',
+        component: () => import('@/views/excel/upload_excel_charge'),
+        name: 'UploadExcel_charge',
+        meta: { title: '上传充值数据' }
+      },
+      {
+        path: 'UploadExcel_staff',
+        component: () => import('@/views/excel/upload_excel_staff'),
+        name: 'UploadExcel_staff',
+        meta: { title: '上传人员数据' }
+      },
     ]
   },
 
