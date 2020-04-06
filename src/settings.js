@@ -1,4 +1,10 @@
 module.exports = {
+
+  /**
+   * 全局url
+   */
+  canteen_base_url:'https://tieta.wuminmin.top/canteen/',
+
   title: 'Vue Element Admin',
 
   /**

@@ -1,9 +1,10 @@
 import request from '@/utils/request'
-
+import module from '@/settings'
 export function upload_canteen_list(data) {
   return request({
     // url: '/vue-element-admin/user/login',
-    url: 'https://tieta.wuminmin.top/canteen/upload_canteen_list',
+    // url: 'https://wx.wuminmin.top/canteen/upload_canteen_list',
+    url: module.canteen_base_url+'upload_canteen_list',
     method: 'post',
     data
   })
